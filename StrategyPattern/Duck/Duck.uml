@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:C_Cpp="http://www.eclipse.org/papyrus/C_Cpp/1" xmlns:Deployment="http://www.eclipse.org/papyrus/Deployment/1" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:standard="http://www.eclipse.org/uml2/5.0.0/UML/Profile/Standard" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML">
+  <uml:Model xmi:id="_-zp3ULkXEemnk8UKdHNArw" name="Duck">
+    <packageImport xmi:type="uml:PackageImport" xmi:id="__E0f0LkXEemnk8UKdHNArw">
+      <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+    </packageImport>
+    <packageImport xmi:type="uml:PackageImport" xmi:id="_vya3ULkYEemnk8UKdHNArw">
+      <importedPackage xmi:type="uml:Model" href="pathmap://PapyrusC_Cpp_LIBRARIES/AnsiCLibrary.uml#_DV8nkBv8EduZN5aJJITI5w"/>
+    </packageImport>
+    <packageImport xmi:type="uml:PackageImport" xmi:id="_w89X0LkYEemnk8UKdHNArw">
+      <importedPackage xmi:type="uml:Model" href="pathmap://PapyrusC_Cpp_LIBRARIES/STL.uml#_vc-DEDWoEea5ROkfuvcZmg"/>
+    </packageImport>
+    <packagedElement xmi:type="uml:Package" xmi:id="_DtVGkLkZEemnk8UKdHNArw" name="classes">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_BR2XALnnEemHv_P-yZt0NA">
+        <body>STRATEGY PATTERN</body>
+      </ownedComment>
+      <packagedElement xmi:type="uml:Class" xmi:id="_UJnS0LkZEemnk8UKdHNArw" name="Duck">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_eWl_8LnkEemHv_P-yZt0NA">
+          <body>Delare two reference variables for the behavior interface types. 
+All duck subclasses (in the same package) inherit these.</body>
+        </ownedComment>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_LE57oLkaEemnk8UKdHNArw" name="flybehaviour" visibility="protected" type="_hZZG0LkZEemnk8UKdHNArw" association="_LE1DILkaEemnk8UKdHNArw"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_MTf1sbkaEemnk8UKdHNArw" name="quackbehaviour" visibility="protected" type="_n7logLkZEemnk8UKdHNArw" association="_MTeAgLkaEemnk8UKdHNArw"/>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_hoBs0LkmEemnk8UKdHNArw" name="perfomFly" specification="_aYhPoLkaEemnk8UKdHNArw">
+          <language>C++</language>
+          <body>flybehaviour->fly();</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_093gILkmEemnk8UKdHNArw" name="performQuack" specification="_YiI80LkaEemnk8UKdHNArw">
+          <language>C++</language>
+          <body>quackbehaviour->quack();</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_eeTtYLknEemnk8UKdHNArw" name="swim" specification="_TluGILkaEemnk8UKdHNArw">
+          <language>C++</language>
+          <body>std::cout &lt;&lt; &quot;All ducks float, even decoys!&quot; &lt;&lt; std::endl;</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_YQ9D8LnPEemHv_P-yZt0NA" name="setFlyBehaviour" specification="_b-9pALkaEemnk8UKdHNArw">
+          <language>C++</language>
+          <body>flybehaviour = fb;</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_ysXy0LnPEemHv_P-yZt0NA" name="setQuackBehaviour" specification="_dcbskLkaEemnk8UKdHNArw">
+          <language>C++</language>
+          <body>quackbehaviour = qb;</body>
+        </ownedBehavior>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_TluGILkaEemnk8UKdHNArw" name="swim" method="_eeTtYLknEemnk8UKdHNArw"/>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_WGeysLkaEemnk8UKdHNArw" name="display" isAbstract="true"/>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_YiI80LkaEemnk8UKdHNArw" name="performQuack" method="_093gILkmEemnk8UKdHNArw"/>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_aYhPoLkaEemnk8UKdHNArw" name="performFly" method="_hoBs0LkmEemnk8UKdHNArw"/>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_b-9pALkaEemnk8UKdHNArw" name="setFlyBehaviour" method="_YQ9D8LnPEemHv_P-yZt0NA">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_9kvqkLnPEemHv_P-yZt0NA" name="fb" type="_hZZG0LkZEemnk8UKdHNArw"/>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_dcbskLkaEemnk8UKdHNArw" name="setQuackBehaviour" method="_ysXy0LnPEemHv_P-yZt0NA">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_4yBicLnPEemHv_P-yZt0NA" name="qb" type="_n7logLkZEemnk8UKdHNArw"/>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_VWdgcLkZEemnk8UKdHNArw" name="MallarDuck">
+        <generalization xmi:type="uml:Generalization" xmi:id="_o_PocLkaEemnk8UKdHNArw" general="_UJnS0LkZEemnk8UKdHNArw"/>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_tV3O4LnUEemHv_P-yZt0NA" name="displayMallarDuck" specification="_nmTtULkfEemnk8UKdHNArw">
+          <language>C++</language>
+          <body>std::cout &lt;&lt; &quot;Displaying MallarDuck&quot; &lt;&lt; std::endl;</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_Vv6CgLnaEemHv_P-yZt0NA" name="MallarDuck" specification="_yfkhYLnZEemHv_P-yZt0NA">
+          <language>C++</language>
+          <body>setFlyBehaviour(new FlyWithWings);
+setQuackBehaviour(new Quack);</body>
+        </ownedBehavior>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_yfkhYLnZEemHv_P-yZt0NA" name="MallarDuck" method="_Vv6CgLnaEemHv_P-yZt0NA"/>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_nmTtULkfEemnk8UKdHNArw" name="display" method="_tV3O4LnUEemHv_P-yZt0NA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_hZZG0LkZEemnk8UKdHNArw" name="FlyBehaviour" isAbstract="true">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_zTFA8LnkEemHv_P-yZt0NA">
+          <body>@brief The interface that all flying behaviour classes implement.</body>
+        </ownedComment>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_sf9LkLkZEemnk8UKdHNArw" name="fly" isAbstract="true"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_n7logLkZEemnk8UKdHNArw" name="QuackBehaviour" isAbstract="true">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_9p3OkLnkEemHv_P-yZt0NA">
+          <body>@brief The interface that all quack behabiour classes implement</body>
+        </ownedComment>
+        <nestedClassifier xmi:type="uml:OpaqueBehavior" xmi:id="_nvCKgLkqEemnk8UKdHNArw" name="printMSG" isAbstract="true">
+          <language>C++</language>
+          <body>std::cout &lt;&lt; msg &lt;&lt; std::endl;</body>
+        </nestedClassifier>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_qU9ToLkZEemnk8UKdHNArw" name="quack" isAbstract="true"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_yvDyILkZEemnk8UKdHNArw" name="FlyWithWings">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_DP5qALnlEemHv_P-yZt0NA">
+          <body>@brief Flying behavior implementation for ducks that Do Fly!</body>
+        </ownedComment>
+        <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_FAF5gLkaEemnk8UKdHNArw" client="_yvDyILkZEemnk8UKdHNArw" supplier="_hZZG0LkZEemnk8UKdHNArw" contract="_hZZG0LkZEemnk8UKdHNArw"/>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_wmQ70LkoEemnk8UKdHNArw" name="flyWithWings" specification="_HM_nMLkgEemnk8UKdHNArw">
+          <language>C++</language>
+          <body>std::cout &lt;&lt; &quot;I'm flying!!&quot; &lt;&lt; std::endl;</body>
+        </ownedBehavior>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_HM_nMLkgEemnk8UKdHNArw" name="fly" method="_wmQ70LkoEemnk8UKdHNArw"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_z8HbILkZEemnk8UKdHNArw" name="FlyNoWay">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_Gi2BcLnlEemHv_P-yZt0NA">
+          <body>@brief Flying behavior implementation for ducks that Do NOT Fly!</body>
+        </ownedComment>
+        <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_FwO9ALkaEemnk8UKdHNArw" client="_z8HbILkZEemnk8UKdHNArw" supplier="_hZZG0LkZEemnk8UKdHNArw" contract="_hZZG0LkZEemnk8UKdHNArw"/>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_IjhmMLkpEemnk8UKdHNArw" name="flyNoWay" specification="_Ip8tYLkgEemnk8UKdHNArw">
+          <language>C++</language>
+          <body>std::cout &lt;&lt; &quot;I can't fly&quot; &lt;&lt; std::endl;</body>
+        </ownedBehavior>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_Ip8tYLkgEemnk8UKdHNArw" name="fly" method="_IjhmMLkpEemnk8UKdHNArw"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_1qUpYLkZEemnk8UKdHNArw" name="Quack">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_xX27YLkpEemnk8UKdHNArw" name="msg" visibility="private">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_HRs8gLkqEemnk8UKdHNArw" value="&quot;Quack&quot;"/>
+        </ownedAttribute>
+        <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_N_NJkLkaEemnk8UKdHNArw" client="_1qUpYLkZEemnk8UKdHNArw" supplier="_n7logLkZEemnk8UKdHNArw" contract="_n7logLkZEemnk8UKdHNArw"/>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_a-QPULndEemHv_P-yZt0NA" name="quack" specification="_Jbs9oLkkEemnk8UKdHNArw">
+          <language>C++</language>
+          <body>std::cout &lt;&lt; msg &lt;&lt; std::endl;</body>
+        </ownedBehavior>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_Jbs9oLkkEemnk8UKdHNArw" name="quack" method="_a-QPULndEemHv_P-yZt0NA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_20O3wLkZEemnk8UKdHNArw" name="Squeak">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_tWosMLkqEemnk8UKdHNArw" name="msg" visibility="private">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_tWosMbkqEemnk8UKdHNArw" value="&quot;Squeak&quot;"/>
+        </ownedAttribute>
+        <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_Op2pELkaEemnk8UKdHNArw" client="_20O3wLkZEemnk8UKdHNArw" supplier="_n7logLkZEemnk8UKdHNArw" contract="_n7logLkZEemnk8UKdHNArw"/>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_rzwz4LndEemHv_P-yZt0NA" name="squeak" specification="_6dLrsLkqEemnk8UKdHNArw">
+          <language>C++</language>
+          <body>std::cout &lt;&lt; msg &lt;&lt; std::endl;</body>
+        </ownedBehavior>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_6dLrsLkqEemnk8UKdHNArw" name="quack" method="_rzwz4LndEemHv_P-yZt0NA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_7PDdQLkZEemnk8UKdHNArw" name="MuteQuack">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_t0lzgLkqEemnk8UKdHNArw" name="msg" visibility="private">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_t0lzgbkqEemnk8UKdHNArw" value="&quot;Silence&quot;"/>
+        </ownedAttribute>
+        <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_PQB4QLkaEemnk8UKdHNArw" client="_7PDdQLkZEemnk8UKdHNArw" supplier="_n7logLkZEemnk8UKdHNArw" contract="_n7logLkZEemnk8UKdHNArw"/>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_wW7dELndEemHv_P-yZt0NA" name="silence" specification="_CZYGMLkrEemnk8UKdHNArw">
+          <language>C++</language>
+          <body>std::cout &lt;&lt; msg &lt;&lt; std::endl;</body>
+        </ownedBehavior>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_CZYGMLkrEemnk8UKdHNArw" name="quack" method="_wW7dELndEemHv_P-yZt0NA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_LE1DILkaEemnk8UKdHNArw" visibility="public" memberEnd="_LE57oLkaEemnk8UKdHNArw _LE7JwbkaEemnk8UKdHNArw">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_LE4tgLkaEemnk8UKdHNArw" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_LE4tgbkaEemnk8UKdHNArw" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_LE7JwbkaEemnk8UKdHNArw" name="duck" type="_UJnS0LkZEemnk8UKdHNArw" association="_LE1DILkaEemnk8UKdHNArw"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_MTeAgLkaEemnk8UKdHNArw" visibility="public" memberEnd="_MTf1sbkaEemnk8UKdHNArw _MThD0bkaEemnk8UKdHNArw">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_MTfOoLkaEemnk8UKdHNArw" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_MTf1sLkaEemnk8UKdHNArw" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_MThD0bkaEemnk8UKdHNArw" name="duck" type="_UJnS0LkZEemnk8UKdHNArw" association="_MTeAgLkaEemnk8UKdHNArw"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_t6IOELkaEemnk8UKdHNArw" name="RedheadDuck">
+        <generalization xmi:type="uml:Generalization" xmi:id="_08DYsLkaEemnk8UKdHNArw" general="_UJnS0LkZEemnk8UKdHNArw"/>
+        <ownedBehavior xmi:type="uml:FunctionBehavior" xmi:id="_6cSHALneEemHv_P-yZt0NA" name="RedheadDuck" specification="_Q0D2wLneEemHv_P-yZt0NA">
+          <language>C++</language>
+          <body>setFlyBehaviour(new FlyWithWings);
+setQuackBehaviour(new Quack);</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_bin1wLnfEemHv_P-yZt0NA" name="displayReadheadDuck" specification="_pR2CELkfEemnk8UKdHNArw">
+          <language>C++</language>
+          <body>std::cout &lt;&lt; &quot;Displaying ReadheadDuck&quot; &lt;&lt; std::endl;</body>
+        </ownedBehavior>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_Q0D2wLneEemHv_P-yZt0NA" name="RedheadDuck" method="_6cSHALneEemHv_P-yZt0NA"/>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_pR2CELkfEemnk8UKdHNArw" name="display" method="_bin1wLnfEemHv_P-yZt0NA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_vedHkLkaEemnk8UKdHNArw" name="RubberDuck">
+        <generalization xmi:type="uml:Generalization" xmi:id="_2B6NgLkaEemnk8UKdHNArw" general="_UJnS0LkZEemnk8UKdHNArw"/>
+        <ownedBehavior xmi:type="uml:FunctionBehavior" xmi:id="_R4vwcLnqEemHv_P-yZt0NA" name="RubberDuck" specification="_6nZw4LnpEemHv_P-yZt0NA">
+          <language>C++</language>
+          <body>setFlyBehaviour(new FlyNoWay);
+setQuackBehaviour(new Squeak);</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_93sngLnqEemHv_P-yZt0NA" name="displayRubberDuck" specification="_rGyxgLkfEemnk8UKdHNArw">
+          <language>C++</language>
+          <body>std::cout &lt;&lt; &quot;Displaying RubberDuck&quot; &lt;&lt; std::endl;</body>
+        </ownedBehavior>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_rGyxgLkfEemnk8UKdHNArw" name="display" method="_93sngLnqEemHv_P-yZt0NA"/>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_6nZw4LnpEemHv_P-yZt0NA" name="RubberDuck" method="_R4vwcLnqEemHv_P-yZt0NA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_xVSGULkaEemnk8UKdHNArw" name="DecoyDuck">
+        <generalization xmi:type="uml:Generalization" xmi:id="_7uumYLkaEemnk8UKdHNArw" general="_UJnS0LkZEemnk8UKdHNArw"/>
+        <ownedBehavior xmi:type="uml:FunctionBehavior" xmi:id="_ckm2MLnqEemHv_P-yZt0NA" name="DecoyDuck" specification="_Fp84ULnqEemHv_P-yZt0NA">
+          <language>C++</language>
+          <body>setFlyBehaviour(new FlyNoWay);
+setQuackBehaviour(new MuteQuack);</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_I3pt8LnrEemHv_P-yZt0NA" name="displayDecoyDuck" specification="_rzFPwLkfEemnk8UKdHNArw">
+          <language>C++</language>
+          <body>std::cout &lt;&lt; &quot;Displaying DecoyDuck&quot; &lt;&lt; std::endl;</body>
+        </ownedBehavior>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_rzFPwLkfEemnk8UKdHNArw" name="display" method="_I3pt8LnrEemHv_P-yZt0NA"/>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_Fp84ULnqEemHv_P-yZt0NA" name="DecoyDuck" method="_ckm2MLnqEemHv_P-yZt0NA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_DviMYLkhEemnk8UKdHNArw" client="_VWdgcLkZEemnk8UKdHNArw" supplier="_1qUpYLkZEemnk8UKdHNArw"/>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_BUM1kLklEemnk8UKdHNArw" name=" RedheadDuck(qb)" client="_t6IOELkaEemnk8UKdHNArw" supplier="_1qUpYLkZEemnk8UKdHNArw"/>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_Ia4kYLklEemnk8UKdHNArw" client="_vedHkLkaEemnk8UKdHNArw" supplier="_20O3wLkZEemnk8UKdHNArw"/>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_QV7vYLklEemnk8UKdHNArw" client="_xVSGULkaEemnk8UKdHNArw" supplier="_7PDdQLkZEemnk8UKdHNArw"/>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_WubigLklEemnk8UKdHNArw" client="_VWdgcLkZEemnk8UKdHNArw" supplier="_yvDyILkZEemnk8UKdHNArw"/>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_ZEASwLklEemnk8UKdHNArw" name="RedheadDuck(fb)" client="_t6IOELkaEemnk8UKdHNArw" supplier="_yvDyILkZEemnk8UKdHNArw"/>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_amwe8LklEemnk8UKdHNArw" client="_vedHkLkaEemnk8UKdHNArw" supplier="_z8HbILkZEemnk8UKdHNArw"/>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_b0O-sLklEemnk8UKdHNArw" client="_xVSGULkaEemnk8UKdHNArw" supplier="_z8HbILkZEemnk8UKdHNArw"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_fTOsgLnSEemHv_P-yZt0NA" name="MainDuckSimulator">
+        <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_5jAzILnSEemHv_P-yZt0NA" client="_fTOsgLnSEemHv_P-yZt0NA">
+          <supplier xmi:type="uml:Interface" href="pathmap://DML_TRAFO/sysinterfaces.uml#_PTWzwCS-Ed-A_I32T0fkaA"/>
+          <contract xmi:type="uml:Interface" href="pathmap://DML_TRAFO/sysinterfaces.uml#_PTWzwCS-Ed-A_I32T0fkaA"/>
+        </interfaceRealization>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_ybhv4LnOEemHv_P-yZt0NA" name="run" specification="_iDvCELnOEemHv_P-yZt0NA">
+          <language>C++</language>
+          <body>Duck* mallard = new MallarDuck;
+mallard->display();
+mallard->performQuack();
+mallard->performFly();
+
+Duck* redhead = new RedheadDuck;
+redhead->display();
+redhead->performQuack();
+redhead->performFly();
+
+Duck* rubber = new RubberDuck;
+rubber->display();
+rubber->performQuack();
+rubber->performFly();
+
+Duck* decoy = new DecoyDuck;
+decoy->display();
+decoy->performQuack();
+decoy->performFly();</body>
+        </ownedBehavior>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_iDvCELnOEemHv_P-yZt0NA" name="run" method="_ybhv4LnOEemHv_P-yZt0NA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_7tiNILnWEemHv_P-yZt0NA" client="_fTOsgLnSEemHv_P-yZt0NA" supplier="_VWdgcLkZEemnk8UKdHNArw"/>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_-YXPILnrEemHv_P-yZt0NA" client="_fTOsgLnSEemHv_P-yZt0NA" supplier="_t6IOELkaEemnk8UKdHNArw"/>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_CDdA0LnsEemHv_P-yZt0NA" client="_fTOsgLnSEemHv_P-yZt0NA" supplier="_vedHkLkaEemnk8UKdHNArw"/>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_F1DqMLnsEemHv_P-yZt0NA" client="_fTOsgLnSEemHv_P-yZt0NA" supplier="_xVSGULkaEemnk8UKdHNArw"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_TIvZwLkbEemnk8UKdHNArw" name="deployment">
+      <packagedElement xmi:type="uml:Package" xmi:id="_UyLcwLkbEemnk8UKdHNArw" name="SystemDepPlan">
+        <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_JW8UALnVEemHv_P-yZt0NA" name="mainDuckSimulator" classifier="_fTOsgLnSEemHv_P-yZt0NA"/>
+      </packagedElement>
+    </packagedElement>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="__EP4ELkXEemnk8UKdHNArw">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="__ERtQLkXEemnk8UKdHNArw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/uml2/5.0.0/UML/Profile/Standard#/"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://UML_PROFILES/Standard.profile.uml#_0"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="__EUJgLkXEemnk8UKdHNArw">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="__EUJgbkXEemnk8UKdHNArw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/Deployment/1#/"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://DEP_PROFILE/Deployment.profile.uml#_gPDsIBa-EearhdjjJ6cVzQ"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="__EVXoLkXEemnk8UKdHNArw">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="__EV-sLkXEemnk8UKdHNArw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/Codegen/1#/"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://Codegen_PROFILES/Codegen.profile.uml#_fPDsIBa-EearhdjjJ6cVzQ"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="__EWlwLkXEemnk8UKdHNArw">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="__EXM0LkXEemnk8UKdHNArw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/C_Cpp/1#/"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://PapyrusC_Cpp_PROFILES/C_Cpp.profile.uml#_j9REUByGEduN1bTiWJ0lyw"/>
+    </profileApplication>
+  </uml:Model>
+  <C_Cpp:Virtual xmi:id="_l7tmALkaEemnk8UKdHNArw" base_operation="_WGeysLkaEemnk8UKdHNArw"/>
+  <Deployment:DeploymentPlan xmi:id="_aNgdALkbEemnk8UKdHNArw" base_Package="_UyLcwLkbEemnk8UKdHNArw"/>
+  <C_Cpp:Virtual xmi:id="_3B-xILkfEemnk8UKdHNArw" base_operation="_sf9LkLkZEemnk8UKdHNArw"/>
+  <C_Cpp:Virtual xmi:id="_5Q2ccLkfEemnk8UKdHNArw" base_operation="_qU9ToLkZEemnk8UKdHNArw"/>
+  <C_Cpp:Include xmi:id="_gxiUQLknEemnk8UKdHNArw" header="#include &lt;iostream>&#xA;" base_class="_UJnS0LkZEemnk8UKdHNArw" base_Classifier="_UJnS0LkZEemnk8UKdHNArw"/>
+  <C_Cpp:Include xmi:id="_0hQnMLknEemnk8UKdHNArw" header="#include &lt;iostream>&#xA;" base_class="_VWdgcLkZEemnk8UKdHNArw" base_Classifier="_VWdgcLkZEemnk8UKdHNArw"/>
+  <C_Cpp:Include xmi:id="_9yuLgLknEemnk8UKdHNArw" header="#include &lt;iostream>&#xA;" base_class="_t6IOELkaEemnk8UKdHNArw" base_Classifier="_t6IOELkaEemnk8UKdHNArw"/>
+  <C_Cpp:Include xmi:id="__ViCELknEemnk8UKdHNArw" header="#include &lt;iostream>&#xA;" base_class="_vedHkLkaEemnk8UKdHNArw" base_Classifier="_vedHkLkaEemnk8UKdHNArw"/>
+  <C_Cpp:Include xmi:id="_BYzhYLkoEemnk8UKdHNArw" header="#include &lt;iostream>&#xA;" base_class="_xVSGULkaEemnk8UKdHNArw" base_Classifier="_xVSGULkaEemnk8UKdHNArw"/>
+  <C_Cpp:Include xmi:id="_zmB4kLkoEemnk8UKdHNArw" header="#include &lt;iostream>" base_class="_yvDyILkZEemnk8UKdHNArw" base_Classifier="_yvDyILkZEemnk8UKdHNArw"/>
+  <C_Cpp:Include xmi:id="_7n42MLkoEemnk8UKdHNArw" header="#include &lt;iostream>" base_class="_z8HbILkZEemnk8UKdHNArw" base_Classifier="_z8HbILkZEemnk8UKdHNArw"/>
+  <C_Cpp:Include xmi:id="_eCmW4LkpEemnk8UKdHNArw" header="#include &lt;iostream>" base_class="_1qUpYLkZEemnk8UKdHNArw" base_Classifier="_1qUpYLkZEemnk8UKdHNArw"/>
+  <C_Cpp:Include xmi:id="_Kti70LkrEemnk8UKdHNArw" header="#include &lt;iostream>" base_class="_20O3wLkZEemnk8UKdHNArw" base_Classifier="_20O3wLkZEemnk8UKdHNArw"/>
+  <C_Cpp:Include xmi:id="_Mb7JMLkrEemnk8UKdHNArw" header="#include &lt;iostream>" base_class="_7PDdQLkZEemnk8UKdHNArw" base_Classifier="_7PDdQLkZEemnk8UKdHNArw"/>
+  <C_Cpp:Ptr xmi:id="_O_LAcLnYEemHv_P-yZt0NA" base_property="_LE57oLkaEemnk8UKdHNArw"/>
+  <C_Cpp:Ptr xmi:id="_Qy1WcLnYEemHv_P-yZt0NA" base_property="_MTf1sbkaEemnk8UKdHNArw"/>
+  <C_Cpp:Ptr xmi:id="_aOjqALnYEemHv_P-yZt0NA" base_parameter="_9kvqkLnPEemHv_P-yZt0NA"/>
+  <C_Cpp:Ptr xmi:id="_dVqk4LnYEemHv_P-yZt0NA" base_parameter="_4yBicLnPEemHv_P-yZt0NA"/>
+  <standard:Create xmi:id="_220OcLnZEemHv_P-yZt0NA" base_BehavioralFeature="_yfkhYLnZEemHv_P-yZt0NA"/>
+  <standard:Create xmi:id="_Q0LykLneEemHv_P-yZt0NA" base_BehavioralFeature="_Q0D2wLneEemHv_P-yZt0NA"/>
+  <standard:Create xmi:id="_6nf3gLnpEemHv_P-yZt0NA" base_BehavioralFeature="_6nZw4LnpEemHv_P-yZt0NA"/>
+  <standard:Create xmi:id="_FqBw0LnqEemHv_P-yZt0NA" base_BehavioralFeature="_Fp84ULnqEemHv_P-yZt0NA"/>
+</xmi:XMI>
